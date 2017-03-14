@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="../../css/find.css">
+</head>
+<body ng-controller="mountainController">
+  <div class="row container-fluid">
+   <input type="text" ng-model="nameFilter.Name" class="col s4 offset-s4" placeholder="Search">
+   <div ng-repeat="mountain in mountains | filter: nameFilter">
+    <div class="col s6">
+       <div class="trail-container">
+        <img ng-src="/data/trail-maps/{{mountain.Trail_Map}}" class="trailmap">
+        </div>
+        <br>
+        <a class="btn waves-light wave-effect" href="#!/find-mountains/{{mountain._id}}">Info</a>
+        <br>
+        <h3>{{mountain.Name}}</h3>
+    </div>
+    </div>
+    </div>
+</body>

@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="../../css/friend-detail.css">
+</head>
+<body ng-controller="friendDetailController">
+<div>
+<div class="container-fluid">
+            <div class="row">
+            <h5 class="right col">username: {{friend.username}} </h5>
+        </div>
+        <h3 class="center row">{{friend.firstName}} {{friend.lastName}}</h3>
+        <h3 class="center row">{{friend.email}}</h3>
+            <div class="row content">
+                <h3>Favorite Mountains</h3>
+                <div class="col s4 image">
+                    <img ng-src="/data/trail-maps/{{friend.favoriteMountains[0].Trail_Map}}">
+                    <h4>{{friend.favoriteMountains[0].Name}}</h4>
+                </div>
+                <div>
+                    <div class="col s4 image">
+                        <img ng-src="/data/trail-maps/{{friend.favoriteMountains[1].Trail_Map}}">
+                        <h4>{{friend.favoriteMountains[1].Name}}</h4>
+                    </div>
+                </div>
+                <div>
+                    <div class="col s4 image">
+                        <img ng-src="/data/trail-maps/{{friend.favoriteMountains[2].Trail_Map}}">
+                        <h4>{{friend.favoriteMountains[2].Name}}</h4>
+                    </div>
+                </div>
+                <div class="row" style="margin: 50px"></div>
+                <div class="row">
+                    <h3>Trips</h3>
+                    <div>
+                        <div class="col s4 image">
+                            <img ng-src="/data/trail-maps/{{friend.trips[0].mountain[0].Trail_Map}}">
+                            <h4>{{friend.trips[0].name}}</h4>
+                            <h4>{{friend.trips[0].niceDate}}</h4>
+                            <a class="btn" ng-click="addTrip(friend.trips[0]._id)" ng-show="friend.trips[0]">Join Trip</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col s4 image">
+                            <img ng-src="/data/trail-maps/{{friend.trips[1].mountain[0].Trail_Map}}">
+                            <h4>{{friend.trips[1].name}}</h4>
+                            <h4>{{friend.trips[1].niceDate}}</h4>
+                            <a class="btn" ng-click="addTrip(friend.trips[1]._id)" ng-show="friend.trips[1]">Join Trip</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col s4 image">
+                            <img ng-src="/data/trail-maps/{{friend.trips[2].mountain[0].Trail_Map}}">
+                            <h4>{{friend.trips[2].name}}</h4>
+                            <h4>{{friend.trips[2].niceDate}}</h4>
+                            <a class="btn" ng-click="addTrip(friend.trips[2]._id)" ng-show="friend.trips[2]">Join Trip</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

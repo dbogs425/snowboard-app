@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="../../css/mountaindetail.css">
+</head>
+<body ng-controller="mountainDetail">
+<div class="container-fluid">
+<div class="row">
+<h1>{{currentMountain.Name}}</h1>
+<img ng-src="data/logos/{{currentMountain.Logo}}" class="logo">
+<br>
+<img ng-src="/data/trail-maps/{{currentMountain.Trail_Map}}" class="map">
+<br>
+</div>
+<div class="row">
+    <h3>{{currentMountain.Address}}</h3>
+</div>
+<div class="row">
+<a href="{{currentMountain.Website}}" class="btn waves-effect waves-light col s2 offset-s3">Website</a>
+<a class="btn waves-light waves-effect col s2" ng-click="addMountain()">Add Favorite</a>
+<a class="btn waves-light waves-effect col s2" href="#!/plan-trip">Plan Trip</a>
+</div>
+<div class="row">
+<div class="col s4">
+<h4>Peak height:</h4>
+<br>
+<h4>{{currentMountain.Summit_Height}}</h4>
+</div>
+<div class="col s4">
+<h4>Base height:</h4>
+<br>
+<h4>{{currentMountain.Base_Height}}</h4>
+</div>
+<div class="col s4">
+<h4>Number of Trails:</h4>
+<br>
+<h4>{{currentMountain.Number_of_Trails}}</h4>
+    </div>
+<div class="col s4">
+<h4>Number of Parks:</h4>
+<br>
+<h4>{{currentMountain.Number_of_Parks}}</h4>
+</div>
+<div class="col s4">
+<h4>Number of Lifts:</h4>
+<br>
+<h4>{{currentMountain.Number_of_Lifts}}</h4>
+</div>
+</div>
+</div>
+</body>

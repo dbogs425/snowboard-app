@@ -1,0 +1,51 @@
+<head>
+    <link rel="stylesheet" href="../../css/create.css">
+</head>
+<body ng-controller="createController">
+   <div class="container-fluid">
+    <a class="waves-effect waves-light btn right backbtn" href="#!/dashboard">Back</a>
+    <div class="row newUserForm">
+        <h1>Create New User</h1>
+        <form class="col s10 offset-s1" novalidate>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="first_name" type="text" class="validate" ng-model="newUser.firstName">
+                    <label for="first_name" class="active">First Name</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="last_name" type="text" class="validate" ng-model="newUser.lastName">
+                    <label for="last_name" class="active">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="username" type="text" class="username" ng-model="newUser.username">
+                    <label for="username" class="active">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" ng-model="newUser.email">
+                    <label for="email" class="active">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate" ng-model="newUser.password">
+                    <label for="password" class="active" ng-minlength="6">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password-repeat" type="password" class="validate" ng-model="passwordRepeat">
+                    <label for="password-repeat" class="active" ng-minlength="6">Repeat Password</label>
+                    <span class="err">{{passwordMessage}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <a class="col m2 offset-m5 s4 offset-s4 waves-effect waves-light btn" ng-click="validateInfo(newUser, passwordRepeat)">Submit</a>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>

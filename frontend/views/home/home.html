@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body ng-controller="homeController">
+    <div class="container-fluid">
+        <div class="row">
+            <h5 class="right col">username: {{currentUser.username}} </h5>
+        </div>
+        <h3 class="center row">{{currentUser.firstName}} {{currentUser.lastName}}</h3>
+        <h3 class="center row">{{currentUser.email}}</h3>
+            <div class="row content">
+                <h3>Favorite Mountains</h3>
+                <div class="col s4 image">
+                    <img ng-src="/data/trail-maps/{{currentUser.favoriteMountains[0].Trail_Map}}">
+                    <h4>{{currentUser.favoriteMountains[0].Name}}</h4>
+                </div>
+                <div>
+                    <div class="col s4 image">
+                        <img ng-src="/data/trail-maps/{{currentUser.favoriteMountains[1].Trail_Map}}">
+                        <h4>{{currentUser.favoriteMountains[1].Name}}</h4>
+                    </div>
+                </div>
+                <div>
+                    <div class="col s4 image">
+                        <img ng-src="/data/trail-maps/{{currentUser.favoriteMountains[2].Trail_Map}}">
+                        <h4>{{currentUser.favoriteMountains[2].Name}}</h4>
+                    </div>
+                </div>
+                <div class="row" style="margin: 50px"></div>
+                <div class="row">
+                    <h3>Trips</h3>
+                    <div>
+                        <div class="col s4 image">
+                            <img ng-src="/data/trail-maps/{{currentUser.trips[0].mountain[0].Trail_Map}}">
+                            <h4>{{currentUser.trips[0].name}}</h4>
+                            <h4>{{currentUser.trips[0].niceDate}}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col s4 image">
+                            <img ng-src="/data/trail-maps/{{currentUser.trips[1].mountain[0].Trail_Map}}">
+                            <h4>{{currentUser.trips[1].name}}</h4>
+                            <h4>{{currentUser.trips[1].niceDate}}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col s4 image">
+                            <img ng-src="/data/trail-maps/{{currentUser.trips[2].mountain[0].Trail_Map}}">
+                            <h4>{{currentUser.trips[2].name}}</h4>
+                            <h4>{{currentUser.trips[2].niceDate}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>

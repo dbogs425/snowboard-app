@@ -1,0 +1,27 @@
+.container-fluid{
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/friendsbackground.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.image{
+    text-align: center;
+}
+img:hover{
+    opacity: .8;
+}
+.content{
+    margin-top: 50px;
+    text-align: center;
+    border-top: lightgrey 2px solid;
+    
+}

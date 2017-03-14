@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="../../css/dash.css">
+</head>
+<body ng-controller="dashController">
+  <div class="row loginInfo">
+   <div class="container">
+    <form class="col s12 m12">
+    <div class="row valign-wrapper">
+        <div class="input-field col s12 m12 valign">
+          <input id="email" type="text" class="active" ng-model="userLogin.username">
+          <label for="email" class="active">Username</label>
+        </div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="input-field col s12 m12 valign">
+          <input id="password" type="password" class="active" ng-model="userLogin.password">
+          <label for="password" class="active">Password</label>
+          <span ng-show="loginMessage" class="err col offset-m2">{{loginMessage}}</span>
+        </div>
+      </div>
+      <div class="row">
+      <a class="col offset-s3 s6 waves-effect waves-light btn" ng-click="login(userLogin)">Login</a>
+        </div>
+    </form>
+      </div>
+  </div>
+<div class="create">
+<h4>New to the App?</h4>
+<h4><a href="#!/create">Create Account</a></h4>
+</div>
+</body>

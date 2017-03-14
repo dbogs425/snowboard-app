@@ -1,0 +1,24 @@
+img{
+    max-width: 800px;
+}
+
+.container-fluid{
+    margin-top: -32px;
+    width: 100%;
+    min-height: 100%;
+    background: url("../images/findbackground.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;  
+    text-align: center;
+    color: white;
+}
+
+.logo{
+    max-height: 100px;
+    border-radius: 50%;
+}
+.map{
+    border: lightgrey solid 3px;
+}

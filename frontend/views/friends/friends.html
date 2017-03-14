@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="../../css/friends.css">
+</head>
+
+<body ng-controller="friendController">
+    <div class="container-fluid">
+        <div class="row">
+            <input type="search" class="col right s3 pull-s1" placeholder="Search for Friends" ng-model="friends.firstName">
+            <div class="row"></div>
+            <div class="row">
+                <div>
+                    <div class="col right s3 pull-s1 userList" ng-hide="!friends.firstName">
+                        <div class="row" ng-repeat="user in users |filter: friends">
+                            <h6>{{user.firstName}} {{user.lastName}}</h6>
+                            <h6>Username: {{user.username}}<a class="btn right" style="margin-top: 3px" ng-click="addFriend(user)">Add</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col s7">
+                    <div class="row">
+                        <div class="left col s4 frienddiv" ng-repeat="friend in currentUser.friends">
+                            <div class="s3 friend-container">
+                                <h5>{{friend.firstName}} {{friend.lastName}}</h5>
+                                <h5>{{friend.username}}</h5>
+                                <a class="btn" href="#!/friends/:{{friend.username}}">View</a>
+                                <a class="btn red" ng-click="removeFriend(friend)">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

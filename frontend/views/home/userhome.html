@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body ng-controller="homeController">
+<div class="row">
+<h5 class="right col">{{currentUser.username}} </h5>
+    </div>
+<h3 class="center row">{{currentUser.firstName}} {{currentUser.lastName}}</h3>
+<div class="row">
+<div>
+    <div class="col s4">
+        <img ng-src=`{{currentUser.favoriteMountains[0].logo}}`>
+        <h4>{{currentUser.favoriteMountains[0].Name}}</h4>
+    </div>
+</div>
+<div>
+    <div class="col s4">
+        <img ng-src=`{{currentUser.favoriteMountains[1].logo}}`>
+        <h4>{{currentUser.favoriteMountains[1].Name}}</h4>
+    </div>
+</div>
+<div>
+    <div class="col s4">
+        <img ng-src=`{{currentUser.favoriteMountains[2].logo}}`>
+        <h4>{{currentUser.favoriteMountains[2].Name}}</h4>
+    </div>
+</div>
+    </div>
+</body>

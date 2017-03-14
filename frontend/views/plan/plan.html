@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="../../css/plan.css">
+</head>
+
+<body ng-controller="planController">
+   <div class="container-fluid plancontainer">
+    <h1>Plan a Trip</h1>
+    <form>
+      <div class="row">
+           <h5>Trip Name: </h5><input type="text" class="col s6 m4 offset-s3 offset-m4" ng-model="newtrip.name">
+        </div>
+       <div class="row">
+           <h5>Date: </h5><input type="date" class="datepicker col s6 m4 offset-s3 offset-m4" ng-model="newtrip.date">
+        </div>
+        <div class="row" style="margin-top: -30px">
+            <div class="input-field col s6 m4 offset-s3 offset-m4 l4 offset-l4">
+                <h5>Distance:</h5><select ng-change="getMountains(distance); mountain = !mountain" ng-model="distance">
+                    <option value="" disabled selected>Choose a Distance</option>
+                    <option value="50">50 Miles</option>
+                    <option value="100">100 Miles</option>
+                    <option value="250">250 Miles</option>
+                    <option value="500">500 Miles</option>
+                    <option value="1000000">Any Distance</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+           <h5>Mountain:</h5>
+            <div class="input-field col s6 m4 offset-s3 offset-m4 l4 offset-l4">
+                <select ng-model="newtrip.mountain">
+                    <option value="" disabled selected>Choose a Location</option>
+                    <option ng-repeat="mountain in mountains" value="{{mountain._id}}">{{mountain.Name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="btn waves-light waves-effect" ng-click="addTrip(newtrip)">Submit</div>
+    </form>
+        <div class="row">
+            <a class="btn waves-light waves-effect mytrips" href="#!/plan-trip/{{username}}">My Trips</a>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="../../css/plan.css">
+</head>
+<body ng-controller="planController">
+<div class="container-fluid mytrippage">
+   <div class="row">
+    <div ng-repeat="trip in currentUser.trips track by $index">
+       <div class="col s3">
+        <h3>{{trip.name}}</h3>
+        <h3>{{trip.niceDate}}</h3>
+        <img ng-src="/data/trail-maps/{{trip.mountain[0].Trail_Map}}">
+        <h3>{{trip.mountain[0].name}}</h3>
+        <a class="btn red waves-effect" ng-click="deleteTrip(trip._id)">Delete</a>
+        </div>
+    </div>
+</div>
+    </div>
+
+</body>
