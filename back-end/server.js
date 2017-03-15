@@ -7,6 +7,7 @@ var morgan = require("morgan");
 var config = require("./config");
 var expressJwt = require("express-jwt");
 
+var port = process.env.PORT || 2000;
 var app = express();
 
 app.use(morgan("dev"));
@@ -23,6 +24,6 @@ mongoose.connect(config.database, function (err) {
     console.log("Connected to database");
 });
 
-app.listen(2000, function () {
-    console.log('Now listening on port 2000');
+app.listen(port, function () {
+    console.log("Now listening on port" + port);
 });
