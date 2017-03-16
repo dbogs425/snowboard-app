@@ -1,0 +1,31 @@
+{
+  "name": "snowboarding-app",
+  "version": "1.0.0",
+  "description": "This is a full stack app I created which allows the user to favorite any mountain within the U.S. and plan trips to a mountain.  They are also able to friend other users and join their trips. This program utilizes user authentication and password hashing, is built with materialize, and uses MongoDB / mongoose on the backend.  I personally created the API for the mountains for all 300+ mountains within the United States.",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "express-jwt": "^5.1.0",
+    "geolocation": "^0.2.0",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbogs425/snowboard-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbogs425/snowboard-app/issues"
+  },
+  "homepage": "https://github.com/dbogs425/snowboard-app#readme"
+}
