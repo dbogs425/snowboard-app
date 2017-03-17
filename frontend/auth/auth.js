@@ -13,7 +13,7 @@ angular.module("snowboardApp.Auth", ['ngStorage'])
 
 .service("authService", ["$http", "$location", "tokenService", function($http, $location, tokenService){
     this.signup = function(newUser){
-        return $http.post("http://localhost:2000/auth/signup", newUser).then(function (response){
+        return $http.post("https://localhost:2000/auth/signup", newUser).then(function (response){
         return(response);
         });
     }
