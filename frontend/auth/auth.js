@@ -13,13 +13,13 @@ angular.module("snowboardApp.Auth", ['ngStorage'])
 
 .service("authService", ["$http", "$location", "tokenService", function($http, $location, tokenService){
     this.signup = function(newUser){
-        return $http.post("http://159.203.125.214/auth/signup", newUser).then(function (response){
-        return(response);
+        return $http.post("/auth/signup", newUser).then(function (response){
+            return(response);
         });
     }
     this.login = function(login){
          var config = {headers: login};
-        return $http.get("http://159.203.125.214/auth/login", config)
+        return $http.get("/auth/login", config)
         .then(function (response){
             tokenService.setToken(response.data.token);
             return response.data;

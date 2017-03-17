@@ -44,7 +44,7 @@ angular.module("snowboardApp")
 
     }
     this.getMountains = function () {
-        return $http.get("http://localhost:2000/mountains")
+        return $http.get("/mountains")
             .then(function (response) {
                 return response.data;
             })
@@ -57,7 +57,7 @@ angular.module("snowboardApp")
             }
         };
         console.log(config);
-        return $http.get("http://localhost:2000/mountains/current", config)
+        return $http.get("/mountains/current", config)
             .then(function (response) {
                 console.log(response);
                 return response.data;
