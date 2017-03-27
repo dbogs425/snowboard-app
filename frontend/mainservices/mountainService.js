@@ -50,16 +50,13 @@ angular.module("snowboardApp")
             })
     }
     this.getCurrent = function () {
-        console.log($routeParams)
         var config = {
             headers: {
                 "_id": $routeParams.name
             }
         };
-        console.log(config);
         return $http.get("http://localhost:2000/mountains/current", config)
             .then(function (response) {
-                console.log(response);
                 return response.data;
             })
     }

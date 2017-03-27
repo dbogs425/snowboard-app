@@ -40,7 +40,6 @@ var userSchema = new mongoose.Schema({
 
 userSchema.pre("save", function(next){
     var user = this;
-    console.log("hey");
     if(!this.isModified("password")) return next();
     bcrypt.hash(user.password, 10, function(err, hash){
        if(err) return next(err);

@@ -33,7 +33,6 @@ userRoute.put("/favorite", function (req, res) {
 })
 
 userRoute.put("/trip", function (req, res) {
-    console.log(req.body);
     User.findOne({
         _id: req.body.userId
     }, function (err, user) {
@@ -44,13 +43,11 @@ userRoute.put("/trip", function (req, res) {
     })
 })
 userRoute.put("/deletetrip", function (req, res) {
-    console.log(req.body);
     var userId = req.body.userId;
     var tripId = req.body.tripId;
     User.findOne({
         _id: req.body.userId
     }, function (err, user) {
-        console.log(user);
         for (var x = 0; x < user.trips.length; x++) {
             if (user.trips[x] == tripId) {
                 user.trips.splice(x, 1);
@@ -94,7 +91,6 @@ userRoute.put("/deletefriend", function (req, res) {
         _id: req.body.userId
     }, function (err, user) {
         if (err) return res.status(500).send(err);
-        console.log(user.friends[1]);
         for (var x = 0; x < user.friends.length; x++) {
             if (user.friends[x] == friendId) {
                 user.friends.splice(x, 1);
@@ -105,7 +101,6 @@ userRoute.put("/deletefriend", function (req, res) {
     });
 });
 userRoute.get("/friend", function (req, res) {
-    console.log(req.headers);
     var query = User.findOne({
         username: req.headers.username
     });
