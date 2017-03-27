@@ -22,7 +22,6 @@ userRoute.get("/current", function (req, res) {
 });
 
 userRoute.put("/favorite", function (req, res) {
-    console.log(req.body);
     User.findOne({
         _id: req.body.userId
     }, function (err, user) {
